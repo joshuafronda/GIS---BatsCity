@@ -1,0 +1,7 @@
+{
+  "name": "Batangas GIS Explorer",
+  "description": "A comprehensive Geographic Information System for Batangas province, providing interactive mapping for tourism, industry, heritage, and hazard zones.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
