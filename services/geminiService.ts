@@ -6,11 +6,8 @@ export class GeminiGISService {
   private ai: GoogleGenAI;
 
   constructor() {
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      console.warn('GEMINI_API_KEY not found in environment variables');
-    }
-    this.ai = new GoogleGenAI({ apiKey });
+    // Always use the process.env.API_KEY directly as a named parameter
+    this.ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   }
 
   async queryBatangasMap(query: string, userLocation?: { latitude: number; longitude: number }): Promise<AIResponse> {
