@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Minimal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root" class="p-8">
+        <h1 class="text-2xl font-bold">Test Page</h1>
+        <p>If you can see this, basic HTML/CSS/JS works</p>
+        <button onclick="testReact()" class="bg-blue-500 text-white px-4 py-2 rounded">Test React</button>
+        <div id="test-result"></div>
+    </div>
+
+    <script>
+        function testReact() {
+            document.getElementById('test-result').innerHTML = 'JavaScript works!';
+        }
+    </script>
+</body>
+</html>

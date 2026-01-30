@@ -6,8 +6,8 @@ import { gisService } from './services/geminiService';
 import { AIResponse } from './types';
 
 // Error boundary component
-class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean}> {
-  constructor(props: {children: React.ReactNode}) {
+class ErrorBoundary extends React.Component<any, {hasError: boolean}> {
+  constructor(props: any) {
     super(props);
     this.state = { hasError: false };
   }
@@ -21,7 +21,7 @@ class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasErr
   }
 
   render() {
-    if (this.state?.hasError) {
+    if (this.state.hasError) {
       return (
         <div className="flex h-screen w-screen items-center justify-center bg-slate-50">
           <div className="text-center">
@@ -38,7 +38,7 @@ class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasErr
       );
     }
 
-    return this.props?.children;
+    return this.props.children;
   }
 }
 
