@@ -107,8 +107,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeLayer, onLayerChange, isOpen, o
             <div className="w-2 h-2 rounded-full bg-green-500 shadow-sm"></div>
             <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Node Sync Active</span>
           </div>
-          <p className="text-[9px] text-slate-300 font-medium tracking-tight leading-relaxed">
-            Satellite data synchronized with <br/> provincial emergency center.
+          <p className="text-[10px] text-slate-300 font-medium tracking-tight leading-relaxed">
+           Made by Joshua Fronda <br/> provincial emergency center.
           </p>
         </div>
       </aside>
