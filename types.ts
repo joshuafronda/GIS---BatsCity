@@ -24,7 +24,7 @@ export interface AIResponse {
   groundingLinks: any[];
 }
 
-// Batangas risk monitoring (matches SQLite columns)
+// Batangas risk monitoring data
 export type RiskLevel = 'Low' | 'Moderate' | 'High';
 
 export interface MunicipalityRisk {
@@ -39,7 +39,7 @@ export interface MunicipalityRisk {
   Tsunami_Risk: RiskLevel;
 }
 
-/** Maps sidebar hazard layer id → SQLite column name */
+/** Maps sidebar hazard layer id → risk data column name */
 export const HAZARD_LAYER_TO_COLUMN: Record<string, keyof Omit<MunicipalityRisk, 'Municipality' | 'lat' | 'lng'>> = {
   'risk-volcano': 'Volcano_Risk',
   'risk-eq-landslide': 'Seismic_Landslide_Risk',
